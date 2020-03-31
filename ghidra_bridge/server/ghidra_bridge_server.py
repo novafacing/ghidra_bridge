@@ -8,6 +8,7 @@ import subprocess
 import sys
 from jfx_bridge import bridge
 from ghidra_bridge_port import DEFAULT_SERVER_PORT
+from ghidra_bridge_port import DEFAULT_SERVER_HOST
 
 # NOTE: we definitely DON'T want to exclude ghidra from ghidra_bridge :P
 import ghidra
@@ -112,7 +113,7 @@ class GhidraBridgeServer(object):
                     "InteractiveListener failed trying to callback client: " + str(e))
 
     @staticmethod
-    def run_server(server_host=bridge.DEFAULT_HOST, server_port=DEFAULT_SERVER_PORT, response_timeout=bridge.DEFAULT_RESPONSE_TIMEOUT, background=True):
+    def run_server(server_host=DEFAULT_SERVER_HOST, server_port=DEFAULT_SERVER_PORT, response_timeout=bridge.DEFAULT_RESPONSE_TIMEOUT, background=True):
         """ Run a ghidra_bridge_server (forever)
             server_host - what address the server should listen on
             server_port - what port the server should listen on
