@@ -5,6 +5,7 @@ import pydoc
 from jfx_bridge import bridge
 
 from .server.ghidra_bridge_port import DEFAULT_SERVER_PORT
+from .server.ghidra_bridge_host import DEFAULT_SERVER_HOST_
 
 """ Use this list to exclude modules and names loaded by the remote ghidra_bridge side from being loaded into namespaces (they'll 
 still be present in the BridgedObject for the __main__ module. This prevents the ghidra_bridge imported by ghidra_bridge_server 
