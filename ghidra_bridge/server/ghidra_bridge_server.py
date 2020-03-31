@@ -8,7 +8,7 @@ import subprocess
 import sys
 from jfx_bridge import bridge
 from ghidra_bridge_port import DEFAULT_SERVER_PORT
-from ghidra_bridge_port import DEFAULT_SERVER_HOST
+from ghidra_bridge_host import DEFAULT_SERVER_HOST
 
 # NOTE: we definitely DON'T want to exclude ghidra from ghidra_bridge :P
 import ghidra
